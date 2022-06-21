@@ -74,7 +74,7 @@ def create_swa_callback_class(K, callback, batch_normalization):
             ):
                 raise ValueError('"swa_lr" must be lower than "swa_lr2".')
 
-        def on_train_begin(self, logs=None):
+        def on_init(self, logs=None):
 
             self.lr_record = []
             self.epochs = self.params.get("epochs")
